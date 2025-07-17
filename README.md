@@ -35,7 +35,8 @@ graph TD
 在列表中找到 APOC 插件，点击其右侧的 "Install" 按钮进行安装。
 安装完成后，需要重启数据库才能使插件生效。
 2. Python 环境
-建议使用虚拟环境以避免包版本冲突。
+建议使用虚拟环境以避免包版本冲突。在anaconda prompt中使用
+conda env create -f environment.yaml
 3、配置环境变量
 这是整个项目中最重要的一步。
 在项目根目录下，创建 .env 文件。
@@ -47,7 +48,7 @@ graph TD
 将您所有需要处理的 .txt, .pdf, .docx 文件放入项目根目录下的 graph 文件夹（如果文件夹不存在，请创建它）。
 2. 构建知识图谱
 运行 graph 脚本。这个脚本会读取源文件，让您确认Schema，然后提取实体和关系，最终构建知识图谱。
-# 假设 graph6.py 是最新版本
+假设 graph6.py 是最新版本
 python graph6.py
 执行完毕后，您可以在 Neo4j Browser 中通过运行 MATCH (n) RETURN n 来查看生成的图谱。
 3. 构建向量数据库
@@ -57,7 +58,7 @@ python vector3.py
 此脚本支持增量更新。如果您第一次运行后，又向 graph 文件夹添加了新文件，再次运行此脚本将只处理新文件。
 4. 进行混合检索
 一切准备就绪后，运行 hybrid 脚本来体验混合检索的效果。
-# 假设 hybrid_search1.py 是最新版本
+假设 hybrid_search1.py 是最新版本
 python hybrid_search1.py
 
 文件说明
