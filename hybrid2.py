@@ -84,7 +84,7 @@ class HybridRAGSystem:
 
             # 加载向量数据库
             vectordb = Chroma(
-                persist_directory="LLM1_ChromaDB",
+                persist_directory="LLM1_ChromaDB_Spacy",
                 embedding_function=embeddings
             )
             logging.info("向量数据库加载成功")
