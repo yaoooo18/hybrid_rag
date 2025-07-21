@@ -84,7 +84,10 @@ graph TD
 conda env create -f environment.yaml
 ```
 > **注意**:  `environment.yaml` 文件已经给出
-
+如果不行，可以尝试将yaml文件中,pip：以下的文字全部复制到requirement.txt
+ ```Generated bash
+pip install -r requirements.txt
+```
 ### 3. 配置环境变量
 
 这是整个项目中最重要的一步。
